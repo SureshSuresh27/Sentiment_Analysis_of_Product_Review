@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis of Product Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            padding-top: 50px;
+        }
+        textarea {
+            width: 400px;
+            height: 150px;
+            font-size: 16px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2> Sentiment Analysis of Product Reviews</h2>
+    <form action="/predict" method="post">
+        <textarea name="review" placeholder="Type or paste your review here..."></textarea><br>
+        <button type="submit">Predict Sentiment</button>
+    </form>
+    <div class="result">{{ prediction_text }}</div>
+</body>
+</html>
